@@ -1,4 +1,5 @@
 /* Exercise 1-17. Write a program to print all input lines that are longer than 80 characters */
+/* DISCLAIMER: This solution assumes that input lines are less than MAX_LENGTH characters, because the task does not specify if and how I should hadle longer lines */
 
 #include <stdio.h>
 
