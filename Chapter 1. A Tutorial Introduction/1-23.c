@@ -9,7 +9,8 @@ int get_line(char line[], int max_in_len);    /* read a line (< max_in_len), ret
 int del_substr(char str[], int str_len, int del_from, int del_to);    /* delete substring [str[del_from], str[del_to]] from str[], return length including '\0'; str_len expected to include '\0'; assume del_from < del_to < str_len */
 void copy(char to[], char from[]);    /* copy "from" into "to", assume "to" is big enough */
 
-int main() {
+int main() 
+{
     char line[MAX_IN_LEN];    /* input line */
     int line_len;             /* input line length */
 
