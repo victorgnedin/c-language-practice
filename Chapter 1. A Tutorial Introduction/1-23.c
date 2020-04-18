@@ -26,8 +26,7 @@ int main() {
                 if (line[i] == '\'' || line[i] == '\"') {
                     literal = i;
                 } else if (line[i] == '/') {
-                    if (comment == -1 && i + 1 < line_len &&
-                        line[i + 1] == '*') {
+                    if (comment == -1 && i + 1 < line_len && line[i + 1] == '*') {
                         comment = i;
                     } else if (comment != -1 && line[i - 1] == '*') {
                         line_len = del_substr(line, line_len, comment, i);
@@ -41,18 +40,17 @@ int main() {
             }
             ++i;
         }
-
         if (comment != -1) {
             line[comment] = '\0';
             comment = 0;
         }
         if (literal != -1)
             literal = 0;
-
         copy(lines[lines_amount], line);
         ++lines_amount;
     }
 
+    /* printing result */
     for (int k = 0; k < lines_amount; ++k)
         printf("%s", lines[k]);
 
